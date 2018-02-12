@@ -11,10 +11,7 @@ From: nvidia/cuda:9.0-cudnn7-devel-ubuntu16.04
                                             python3 \
                                             python3-pip
     pip3 install numpy pyyaml mkl setuptools cmake cffi
-
-    mkdir /repo-src && cd /repo-src
-    git clone --recursive https://github.com/pytorch/pytorch
-    cd pytorch
-    python3 setup.py install
+    pip3 install http://download.pytorch.org/whl/cu90/torch-0.3.0.post4-cp35-cp35m-linux_x86_64.whl 
+    pip3 install torchvision
 
     apt-get clean
